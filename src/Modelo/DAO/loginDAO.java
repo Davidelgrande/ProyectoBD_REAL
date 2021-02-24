@@ -20,7 +20,7 @@ public class loginDAO {
     private static final String SQL_UPDATE = "UPDATE login SET  correo = ? , clave = ?  WHERE id_administrador = ?";
     private static final String SQL_READ = "SELECT *FROM login WHERE id_administrador = ?";
     private static final String SQL_READALL = "SELECT *FROM login"; 
-    
+    private static final String SQL_LOGIN = "SELECT * FROM login where correo =? and clave=?"; 
     
     
     private static final Conexion con = Conexion.getInstance ();
@@ -135,7 +135,7 @@ public class loginDAO {
         loginDTO objRes = null;
         PreparedStatement psnt;
         try {
-            psnt = con.getCnn().prepareStatement(SQL_READ);
+            psnt = con.getCnn().prepareStatement(SQL_LOGIN);
             psnt.setString(1, filter.getCorreo());
             psnt.setString(2, filter.getClave());
             ResultSet rs = psnt.executeQuery();
