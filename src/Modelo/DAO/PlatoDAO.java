@@ -46,6 +46,7 @@ public class PlatoDAO {
                         System.out.println("bien jeje");
                     }
                 }
+                
                 return true;
             }
         } catch (SQLException ex) {
