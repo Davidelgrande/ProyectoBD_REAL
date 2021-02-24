@@ -5,6 +5,8 @@
  */
 package proyecto_final;
 
+import Vista.Login;
+
 /**
  *
  * @author user
@@ -15,7 +17,8 @@ public class Proyecto_Final {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Login ob = new Login(); 
+        ob.show();
     }
     
 }
